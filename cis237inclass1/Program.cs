@@ -22,12 +22,21 @@ namespace cis237inclass1
             Employee[] employees = new Employee[10];
 
             //hard coded employees added to array
-            employees[0] = new Employee("David", "Barnes", 835.00m);
-            employees[1] = new Employee("James", "Kirk", 453.00m);
-            employees[2] = new Employee("Jean~Luc", "Picard", 290.00m);
-            employees[3] = new Employee("Benjamin", "Sisko", 587.00m);
-            employees[4] = new Employee("Kathryn", "Janeway", 194.00m);
-            employees[5] = new Employee("Johnathan", "Archer", 135.00m);
+            //employees[0] = new Employee("David", "Barnes", 835.00m);
+            //employees[1] = new Employee("James", "Kirk", 453.00m);
+            //employees[2] = new Employee("Jean~Luc", "Picard", 290.00m);
+            //employees[3] = new Employee("Benjamin", "Sisko", 587.00m);
+            //employees[4] = new Employee("Kathryn", "Janeway", 194.00m);
+            //employees[5] = new Employee("Johnathan", "Archer", 135.00m);
+
+            //make the string for the path to the csv file.
+            string pathToCsv = "../employee.csv";
+
+            //instanciate the csvprocessor
+            CSVProcessor csvProcessor = new CSVProcessor();
+            //call the importCSV method sending over the path and array where the records can be stored.
+            csvProcessor.InportCsv(pathToCsv, employees);
+
 
             //get user input
             int choice = ui.GetUserInput();
@@ -52,7 +61,6 @@ namespace cis237inclass1
                 //re enter input
                 choice = ui.GetUserInput();
             }
-
         }
     }
 }
