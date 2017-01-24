@@ -11,7 +11,7 @@ namespace cis237inclass1
         static void Main(string[] args)
         {
             //make a new UI class
-            UserInterface ui = new UserInterface();
+            //UserInterface ui = new UserInterface();
 
             //new employee being created using the default
             //constructor that we wrote in the employee class
@@ -39,7 +39,7 @@ namespace cis237inclass1
 
 
             //get user input
-            int choice = ui.GetUserInput();
+            int choice = StaticUserInterface.GetUserInput();
 
             //loop until 2
             while (choice != 2){
@@ -56,10 +56,10 @@ namespace cis237inclass1
                         }
 
                     }
-                }
-                ui.Output(outputString);
+                    StaticUserInterface.Output(outputString);
+                }                
                 //re enter input
-                choice = ui.GetUserInput();
+                choice = StaticUserInterface.GetUserInput();
             }
         }
     }
